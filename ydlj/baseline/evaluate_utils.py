@@ -192,7 +192,6 @@ def compute_predictions(
                 predict_answers = [best_non_null_entry.text]
         if not multi_span_predict:
             predict_answers = predict_answers[0:1]
-        assert len(predict_answers) != 0
         all_predictions.append({"id": example.qas_id, "answer": predict_answers})
         current_nbest = []
         for (i, prediction) in enumerate(predictions):

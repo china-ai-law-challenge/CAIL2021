@@ -22,8 +22,6 @@ def set_seed(args):
     random.seed(args.seed)
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
-    # if args.n_gpu > 0:
-    #     torch.cuda.manual_seed_all(args.seed)
 
 
 def to_list(tensor):
@@ -132,7 +130,6 @@ def train(args, train_dataset: TensorDataset, model: nn.Module,
 def evaluate(args, model, tokenizer, prefix, eval_data_dir: str,
              ground_truth_file: str = None, multi_span_predict=True):
     logging.info(f"Loading data for evaluation from {eval_data_dir}!")
-    # 通过dataset来决定是在dev集上还是则测试集上evaluate
     examples = load_data(join(args.eval_data_dir, "dev_examples.pkl.gz"))
     features = load_data(join(args.eval_data_dir, "dev_features.pkl.gz"))
     dataset = convert_features_to_dataset(features, is_training=False)
@@ -152,8 +149,6 @@ def evaluate(args, model, tokenizer, prefix, eval_data_dir: str,
     for batch in tqdm(eval_dataloader, desc="Evaluating", disable=True):
         model.eval()
         batch = tuple(t.to(args.device) for t in batch)
-
-        # 利用当前模型对每个feature计算原始结果
         with torch.no_grad():
             inputs = {
                 "input_ids": batch[0],
