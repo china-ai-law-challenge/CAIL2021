@@ -203,6 +203,7 @@ scikit-multilearn         0.2.0
 scipy                     1.3.1          
 secretstorage             3.1.2          
 sentencepiece             0.1.86         
+seqeval                   1.2.2
 setuptools                49.2.0         
 simplegeneric             0.8.1          
 six                       1.16.0      
