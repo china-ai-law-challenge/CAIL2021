@@ -1,0 +1,24 @@
+{
+  "model_type": "bert",
+  "max_seq_len": 512,
+  "model_path": "model/bert/",
+  "log_path": "log/",
+
+  "train_file_path": "data/train.csv",
+  "valid_file_path": "data/valid.csv",
+
+  "batch_size": 24,
+
+  "bert_model_path": "model/bert/bert-base-chinese/",
+  "hidden_size": 768,
+  "num_classes": 2,
+  "dropout": 0.01,
+
+  "lr": 5e-4,
+  "num_epoch": 10,
+  "num_warmup_steps": 2000,
+  "gradient_accumulation_steps": 1,
+  "max_grad_norm": 1e-3,
+
+  "experiment_name": "BERT"
+}

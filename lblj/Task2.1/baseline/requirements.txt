@@ -1,0 +1,36 @@
+absl-py @ file:///tmp/build/80754af9/absl-py_1623861369333/work
+astor==0.8.1
+cached-property @ file:///tmp/build/80754af9/cached-property_1600785575025/work
+certifi==2021.5.30
+coverage @ file:///tmp/build/80754af9/coverage_1614614864940/work
+Cython @ file:///tmp/build/80754af9/cython_1626249882473/work
+fire==0.4.0
+gast==0.2.2
+google-pasta==0.2.0
+grpcio @ file:///tmp/build/80754af9/grpcio_1614883945333/work
+h5py @ file:///tmp/build/80754af9/h5py_1622088444809/work
+importlib-metadata @ file:///tmp/build/80754af9/importlib-metadata_1617877314848/work
+joblib==1.0.1
+Keras-Applications @ file:///tmp/build/80754af9/keras-applications_1594366238411/work
+Keras-Preprocessing @ file:///tmp/build/80754af9/keras-preprocessing_1612283640596/work
+Markdown @ file:///tmp/build/80754af9/markdown_1614363832606/work
+mkl-fft==1.3.0
+mkl-random @ file:///tmp/build/80754af9/mkl_random_1626179032232/work
+mkl-service==2.4.0
+numpy==1.19.5
+opt-einsum @ file:///tmp/build/80754af9/opt_einsum_1621500238896/work
+protobuf==3.14.0
+scikit-learn==0.24.2
+scipy @ file:///tmp/build/80754af9/scipy_1618852618548/work
+six @ file:///tmp/build/80754af9/six_1623709665295/work
+sklearn==0.0
+tensorboard==1.15.0
+tensorflow==1.15.0
+tensorflow-estimator==1.15.1
+termcolor==1.1.0
+threadpoolctl==2.2.0
+typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1624965014186/work
+webencodings==0.5.1
+Werkzeug==0.16.1
+wrapt==1.12.1
+zipp @ file:///tmp/build/80754af9/zipp_1625570634446/work

@@ -1,0 +1,16 @@
+CUDA_VISIBLE_DEVICES='0' python run_classifier_multi_label.py \
+    --data_dir="../../data/step1_data"     \
+    --task_name=multi_class        \
+    --do_train=true   \
+    --do_eval=true   \
+    --do_predict=true   \
+    --vocab_file=../BERT_BASE_DIR/vocab.txt     \
+    --bert_config_file=../BERT_BASE_DIR/bert_config.json  \
+    --max_seq_length=500    \
+    --train_batch_size=16 \
+    --learning_rate=5e-5  \
+    --num_train_epochs=500 \
+    --save_checkpoints_steps=50  \
+    --output_dir="../output" \
+    --init_checkpoint=../BERT_BASE_DIR/bert_model.ckpt \
+    --multi_label_file="../../data/step1_data/labels.txt"
