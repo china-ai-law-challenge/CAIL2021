@@ -2,6 +2,10 @@
 
 该项目为 **CAIL2021——案情标签预测** 的代码和模型提交说明
 
+数据集下载请访问比赛测评主页 [[link]](http://cail.cipsc.org.cn/datagrid.html?raceID=6)，CAIL2021官网[[link]](http://cail.cipsc.org.cn/index.html)
+
+选手交流QQ群：237633234
+
 ## 数据说明
 
 本任务所使用的数据集来自于裁判文书网公开的裁判文书。
