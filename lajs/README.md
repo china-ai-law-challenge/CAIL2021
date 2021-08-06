@@ -46,6 +46,7 @@ candidate的各个字段含义如下：
 - ajId：候选案例的ID（可忽略）
 - ajName：案例的名称
 - ajjbqk：案件基本情况
+- cpfxgc：裁判分析过程
 - pjjg：法院的判决结果
 - qw：判决书的全文内容
 - writID：判决书的ID（可忽略）
