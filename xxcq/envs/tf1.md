@@ -164,7 +164,8 @@ pycparser                 2.20
 pycrypto                  2.6.1          
 pygments                  2.6.1          
 pyhanlp                   0.1.64         
-pyltp                     0.2.1          
+pyltp                     0.2.1       
+pynlpir                   0.6.0 
 pynvrtc                   9.2            
 pyopenssl                 20.0.1          
 pyparsing                 2.4.7          
@@ -172,7 +173,8 @@ pyramid                   1.10.4
 pyramid-mailer            0.15.1         
 pyrsistent                0.16.0         
 pysocks                   1.7.1           
-python                    3.6.9           
+python                    3.6.9     
+python-crfsuite           0.9.7
 python-dateutil           2.8.1          
 python-graphviz           0.14.1         
 python-levenshtein        0.12.0         
@@ -206,6 +208,7 @@ setuptools                52.0.0
 simplegeneric             0.8.1          
 six                       1.16.0        
 sklearn                   0.0            
+sklearn-crfsuite          0.3.6
 skorch                    0.8.0          
 smart-open                2.0.0          
 soupsieve                 2.0            
