@@ -1,6 +1,6 @@
 #coding: utf-8
 infile = "/input/input.json"
-outfile = "/result/output.json"
+outfile = "/output/result.json"
 def main():
     data = open(infile,"r")
     result = open(outfile,"w")
