@@ -1,10 +1,10 @@
 ## 现有的系统环境
 
-[sfzy1](./sfzy1.md)
+[sfzy_env1](./sfzy_env1.md)
 
-[sfzy2](./sfzy2.md)
+[sfzy_env2](./sfzy_env2.md)
 
-[sfzy3](./sfzy3.md)
+[sfzy_env3](./sfzy_env3.md)
 
 等待补全中
 
