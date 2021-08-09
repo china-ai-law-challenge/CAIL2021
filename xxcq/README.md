@@ -57,5 +57,7 @@ QQ群：237633234
 
 [tf1&pytorch](./envs/tf1.md)
 
+[torch1.9&tf2.5](./envs/torch1.9.md)
+
 ## 问题反馈
 如有问题，请在GitHub Issue中提交
