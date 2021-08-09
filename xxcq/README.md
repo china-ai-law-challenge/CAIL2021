@@ -43,7 +43,7 @@ QQ群：237633234
 **请注意，如果你想要自己通过命令行运行python代码，请按照如下命令运行**
 
 ```bash
-sudo /home/user/miniconda/bin/python3 work.py
+sudo /root/miniconda/bin/python3 work.py
 ```
 
 ## 代码的内容
