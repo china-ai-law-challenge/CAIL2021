@@ -1,5 +1,6 @@
 import json
-from random import choice
+from numpy import random
+random.seed(2147483647) # big prime number
 input_path = '/input/input.json'  # input file path
 output_path = '/output/result.json'  # output file path
 if __name__ == "__main__":
@@ -8,7 +9,7 @@ if __name__ == "__main__":
             for line in f:
                 data = json.loads(line)
                 id = data.get('id')
-                answer = choice(data.get('candidates'))
+                answer = random.choice(data.get('candidates'))
                 rst = dict(
                     id=id,
                     answer=answer
