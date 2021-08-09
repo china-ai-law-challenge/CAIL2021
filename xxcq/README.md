@@ -40,12 +40,19 @@ QQ群：237633234
 
 你可以在 ``model`` 中找到最简单的提交代码的格式。你需要将你所有的代码压缩为一个 ``zip`` 文件进行提交，该 ``zip`` 文件内部形式可以参看 ``model/submit_sample.zip``。该 ``zip`` 文件**内部顶层**必须包含``main.py``，为运行的入口程序，我们会在该目录下使用``python3 main.py``来运行你的程序。
 
+**请注意，如果你想要自己通过命令行运行python代码，请按照如下命令运行**
+
+```bash
+sudo /home/user/miniconda/bin/python3 work.py
+```
+
 ## 代码的内容
 
 对于你的代码，你需要从``/input/input.json``中读取数据进行预测，该数据格式与下发数据格式完全一致，隐去``entities``字段信息。选手需要将预测的结果输出到``/output/output.json``中，预测结果文件为一个json格式的文件，包含两个字段，分别为``id``和``entities``，具体可以查看 ``evaluate/result.json``。
 
 你可以利用 ``model`` 下的文件进行进一步参考。**请注意**，在加载模型的时候请尽量使用相对路径，我们会将提交的压缩包解压到``/model``路径下然后运行。
 
+我们提供基于``bert-base + softmax``的基线模型（训练代码），放置在``baseline``目录下，供选手参考。
 
 ## 评测脚本
 
