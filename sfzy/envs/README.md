@@ -1,10 +1,10 @@
 ## 现有的系统环境
 
-[sfzy 1](./sfzy 1.md)
+[sfzy1](./sfzy1.md)
 
-[sfzy 2](./sfzy 2.md)
+[sfzy2](./sfzy2.md)
 
-[sfzy 3](./sfzy 3.md)
+[sfzy3](./sfzy3.md)
 
 等待补全中
 
