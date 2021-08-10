@@ -8,7 +8,7 @@
 
 ## 数据集说明
 
-本任务所使用的数据集来自于裁判文书网公开的裁判文书。其中初赛阶段全部数据、复赛阶段训练集、封测阶段训练集均使用公开的中文类案检索数据集[LeCaRD](https://github.com/myx666/LeCaRD)。以初赛阶段数据集为例，文件结构如下：
+本任务所使用的数据集来自于裁判文书网公开的裁判文书。其中初赛阶段全部数据、复赛阶段训练集、封测阶段训练集均使用公开的中文类案检索数据集[LeCaRD](https://github.com/myx666/LeCaRD)。以初赛阶段测试数据集为例，文件结构如下：
 
 ```
 input
@@ -23,7 +23,7 @@ input
 6 directories, 1 file
 ```
 
-其中，input是输入文件根目录，包含了两个部分：`query.json`和`candidates/`。
+其中，input是输入文件根目录，包含了两个部分：`query.json`和`candidates/`。如果是训练集，在根目录下还会有一个label文件：`label_top30_dict.json`。
 `query.json`包括了该阶段所有的query，每个query均以字典格式进行存储。下面是一个query的示例：
 
 ```
@@ -66,11 +66,13 @@ Yixiao Ma, Yunqiu Shao, Yueyue Wu, Yiqun Liu∗, Ruizhe Zhang, Min Zhang, Shaopi
 
 ## 代码的内容
 
-对于你的代码，你需要从`args.input`中读取数据进行类案检索，`args.input`即为前面提到的`input/`文件夹路径，格式也保持一致。在完成了任务、得到每个query的candidate排序列表后，需要将结果保存到`args.input`下且**必须**命名为`prediction.json`。结果以字典格式存储，下面是一个`prediction.json`的示例（数字仅供示意）：
+对于你的代码，你需要从`args.input`中读取数据进行类案检索，`args.input`即为前面提到的`input/`文件夹路径，格式也保持一致。在完成了任务、得到每个query的candidate排序列表后，需要将结果保存到`args.input`下且**必须**命名为`prediction.json`，结果以字典格式存储。下面是一个`prediction.json`的示例（数字仅供示意）：
 
 ```
 { "111": [12, 7, 87, ... ], "222": [8765, 543, 777, ... ], "-32": [99, 342, 30, ...] ... }
 ```
+
+在`baseline/`文件夹下，有一个简单的bm25模型作为参考；在初赛数据集上，该模型的NDCG@30为0.7903。
 
 请注意：提交结果的字典务必包括**全部**query的`ridx`作为key，并且由于本次类案检索任务的评测指标是NDCG@30，所以每个key下对应的列表长度至少为30（建议为100）。提交格式的错误将会直接影响评测结果！
 
@@ -81,6 +83,20 @@ Yixiao Ma, Yunqiu Shao, Yueyue Wu, Yiqun Liu∗, Ruizhe Zhang, Min Zhang, Shaopi
 ## 其他语言的支持
 
 如上文所述，我们现阶段只支持`python`语言的提交，但是这并不代表你不能够使用其他语言进行预测。你可以使用`python3 main.py --input INPUT_PATH --output OUTPUT_PATH`去调用运行其他语言的命令。
+
+## 常见问题Q&A（持续更新）：
+
+### 为什么`label_top30_dict.json`下每个query只有30个candidate的标签？
+
+对于其余无标签的70个candidate，默认label=0。
+
+### 初赛阶段训练集只有20个query吗？
+
+理论上是的，但是实际上你也可以从LeCaRD数据集github上获取到全部的数据、并利用更多数据训练你的模型。初赛阶段的测试集是`query.json`中的前5个query，但是由于初赛的目的是为了让参赛者能够对类案检索赛道有一个初步的认识以及跑通整个流程，因此初赛结果不计入总成绩，你也不需要针对初赛阶段的测试集进行“过拟合训练”来提高排名。
+
+### 有baseline吗？
+
+baseline（bm25）已上传到了`baseline/`文件夹下，名称为`main.py`。如果你想使用baseline上传测试，需要将同目录下的`stopword.txt`也一起打包在`main.zip`中。
 
 ## 现有的系统环境
 
