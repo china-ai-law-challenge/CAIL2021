@@ -1,3 +1,5 @@
+python 版本为 3.6.9
+
 ```shell script
 absl-py==0.9.0
 anykeystore==0.2

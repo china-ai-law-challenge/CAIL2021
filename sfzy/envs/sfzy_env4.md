@@ -1,3 +1,5 @@
+python 版本为 3.7.10
+
 ```shell script
 absl-py==0.13.0
 apex==0.1
@@ -48,6 +50,7 @@ oauthlib==3.1.1
 olefile==0.46
 opt-einsum==3.3.0
 packaging==21.0
+pandas==1.3.1
 parso
 pexpect
 pickleshare
@@ -65,12 +68,14 @@ Pygments
 pyOpenSSL
 pyparsing==2.4.7
 PySocks
+python-dateutil==2.8.2
 python-etcd==0.4.5
 pytz
 PyYAML==5.4.1
 regex==2021.8.3
 requests
 requests-oauthlib==1.3.0
+rouge==1.0.1
 rsa==4.7.2
 ruamel-yaml-conda
 sacremoses==0.0.45
