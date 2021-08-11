@@ -1,3 +1,5 @@
+python 版本为 3.7.7
+
 ```shell script
 absl-py==0.13.0
 allennlp==1.0.0
