@@ -145,3 +145,16 @@ wrapt                   1.12.1
 等待补全中
 
 如果你有需要的环境，请在github issue提出申请，或请联系比赛管理员进行安装。
+
+## 预训练语言模型
+因评测环境不允许连接互联网，若选手需要使用预训练语言模型，则需要自己手动上传。同时，评测环境中已经支持`transformers`中部分预训练语言模型，可直接通过 `model = AutoModel.from_pretrained(modelname)` 进行加载。已支持的预训练语言模型包括：
+```
+bert-base-chinese
+thunlp/Lawformer
+hfl/chinese-bert-wwm-ext
+hfl/chinese-electra-180g-base-discriminator
+hfl/chinese-legal-electra-base-discriminator
+hfl/chinese-macbert-base
+hfl/chinese-macbert-large
+```
+如有进一步需要可联系管理员进行安装。
