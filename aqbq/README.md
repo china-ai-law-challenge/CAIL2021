@@ -32,6 +32,10 @@
 
 最终测试集中不包含 `result` 和 `evidence` 字段，选手根据其他字段信息预测`result`，最终评测时**只考虑** `result` 字段，不考虑 `evidence` 字段
 
+# Baseline模型
+
+我们提供了基于bert-base-chinese的baseline模型，代码及使用方式在Baseline文件夹 [link](https://github.com/china-ai-law-challenge/CAIL2021/tree/main/aqbq/Baseline)
+
 ## 提交的文件格式及组织形式
 
 你可以在`python_sample`中找到最简单的提交代码的格式。你需要将你所有的代码压缩为一个`zip`文件进行提交，该`zip`文件内部形式可以参看`python_sample/main.zip`。该`zip`文件**内部顶层**必须包含`main.py`，为运行的入口程序，我们会在该目录下使用`python3 main.py`来运行你的程序。
@@ -165,3 +169,18 @@ zope.event             4.5.0
 zope.interface         4.7.1
 ```
 
+## 预训练语言模型
+
+因评测环境不允许连接互联网，若选手需要使用预训练语言模型，则需要自己手动上传。评测环境中已经支持`transformers`中部分预训练语言模型，可直接通过 `model = AutoModel.from_pretrained(modelname)` 进行加载。已支持的预训练语言模型包括：
+
+```
+bert-base-chinese
+thunlp/Lawformer
+hfl/chinese-bert-wwm-ext
+hfl/chinese-electra-180g-base-discriminator
+hfl/chinese-legal-electra-base-discriminator
+hfl/chinese-macbert-base
+hfl/chinese-macbert-large
+```
+
+如有进一步需要可联系管理员进行安装。
