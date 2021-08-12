@@ -8,7 +8,7 @@ MODEL_NAME_OR_PATH='bert-base-chinese'
 OUTPUT_DIR='./output'
 LABEL='./datasets/CAIL司法文本信息抽取/labels.txt'
 
-CUDA_VISIBLE_DEVICES='0' python run_softmax_ner.py \
+CUDA_VISIBLE_DEVICES='0' /home/user/miniconda/bin/python run_softmax_ner.py \
 --data_dir $DATA_DIR \
 --model_type $MODEL_TYPE \
 --model_name_or_path $MODEL_NAME_OR_PATH \
