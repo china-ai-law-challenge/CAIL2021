@@ -2,12 +2,14 @@
 # Name                    Version     
 _libgcc_mutex             0.1            
 absl-py                   0.13.0         
+aiohttp                   3.7.4.post0    
 allennlp                  2.6.0          
 anykeystore               0.2            
 argon2-cffi               20.1.0         
 astor                     0.8.1          
 astunparse                1.6.3          
 async-generator           1.10           
+async-timeout             3.0.1          
 attrs                     19.3.0         
 backcall                  0.1.0          
 backports-csv             1.0.7          
@@ -56,6 +58,7 @@ feedparser                6.0.8
 filelock                  3.0.12         
 flask                     1.1.2          
 flatbuffers               1.12           
+fsspec                    2021.7.0       
 funcsigs                  1.0.2          
 future                    0.18.2         
 gast                      0.4.0          
@@ -98,7 +101,7 @@ jpype1                    0.7.0
 jsonnet                   0.17.0         
 jsonschema                3.2.0          
 jupyter                   1.0.0          
-jupyter-client            6.1.12         
+jupyter-client            6.2.0          
 jupyter-console           6.4.0          
 jupyter-core              4.7.1          
 jupyterlab-pygments       0.1.2          
@@ -130,6 +133,7 @@ matplotlib                3.2.1
 matplotlib-inline         0.1.2          
 mistune                   0.8.4          
 more-itertools            8.8.0          
+multidict                 5.1.0          
 munch                     2.5.0          
 murmurhash                1.0.5          
 nbclient                  0.5.3          
@@ -174,6 +178,7 @@ pybind11                  2.7.1
 pycosat                   0.6.3         
 pycparser                 2.20          
 pydantic                  1.8.2          
+pydeprecate               0.3.1          
 pygments                  2.9.0          
 pyhanlp                   0.1.64         
 pyopenssl                 19.1.0        
@@ -185,7 +190,7 @@ python                    3.8.5
 python-crfsuite           0.9.7          
 python-dateutil           2.8.2          
 python-docx               0.8.11         
-pytorch-lightning         0.8.5          
+pytorch-lightning         1.4.2          
 pytorch-pretrained-bert   0.6.2          
 pytorch-transformers      1.2.0          
 pytz                      2021.1         
@@ -242,6 +247,7 @@ tokenizers                0.10.3
 toml                      0.10.2         
 torch                     1.9.0+cu111    
 torchaudio                0.9.0          
+torchmetrics              0.5.0          
 torchvision               0.10.0+cu111   
 tornado                   6.1            
 tqdm                      4.51.0        
@@ -261,6 +267,7 @@ wrapt                     1.12.1
 xgboost                   1.4.2          
 xz                        5.2.5         
 yaml                      0.2.5         
+yarl                      1.6.3          
 zc-lockfile               2.0            
 zipp                      3.5.0          
 zlib                      1.2.11    
