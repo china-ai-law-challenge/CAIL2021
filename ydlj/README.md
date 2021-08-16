@@ -38,8 +38,9 @@ QQ群：237633234
 
 ## 现有的系统环境
 
-[torch1.4+transformers3.4](https://github.com/china-ai-law-challenge/CAIL2021/edit/main/ydlj/envs/torch1.4+transformers3.4.md)
-[torch1.8+transformers4.9](https://github.com/china-ai-law-challenge/CAIL2021/edit/main/ydlj/envs/torch1.8+transformers4.9.md)
+[torch1.4+transformers3.4](./envs/torch1.4+transformers3.4.md)
+
+[torch1.8+transformers4.9](./envs/torch1.8+transformers4.9.md)
 
 另外评测使用的GPU型号是Tesla V100G32。
 
@@ -48,7 +49,7 @@ QQ群：237633234
 ## 关注我们
 欢迎关注哈工大讯飞联合实验室官方微信公众号，了解最新的技术动态。
 
-<div align=center><img width="400" height="400" src="https://github.com/china-ai-law-challenge/CAIL2021/edit/main/ydlj/images/HFL.jpg"/></div>
+<div align=center><img width="400" height="400" src="./images/HFL.jpg"/></div>
 
 ## 问题反馈
 如有问题，请在GitHub Issue中提交
