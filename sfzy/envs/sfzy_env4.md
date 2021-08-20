@@ -19,6 +19,7 @@ conda-package-handling
 cryptography
 decorator
 dnspython==2.1.0
+einops==0.3.0
 filelock
 flatbuffers==1.12
 gast==0.4.0

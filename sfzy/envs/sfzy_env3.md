@@ -37,6 +37,7 @@ defusedxml==0.7.1
 dill==0.3.2
 docutils==0.15.2
 -e git+https://gitee.com/wangyizhen/fairseq.git@16e9661bd968cf66b02d7870c038d7219da3a5b9#egg=fairseq
+einops==0.3.0
 fastai==1.0.61
 fastprogress==0.2.3
 fasttext==0.9.2

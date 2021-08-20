@@ -45,6 +45,7 @@ decorator==4.4.2
 defusedxml==0.6.0
 dill==0.3.4
 docutils==0.15.2
+einops==0.3.0
 fastai==1.0.61
 fastprogress==0.2.3
 fasttext==0.9.2
