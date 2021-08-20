@@ -16,6 +16,7 @@ backports-weakref         1.0.post1
 beautifulsoup4            4.9.0          
 bert-serving-client       1.10.0         
 bert-serving-server       1.10.0         
+bert4keras                0.6.5          
 blas                      1.0               
 bleach                    3.1.5          
 blis                      0.4.1          
