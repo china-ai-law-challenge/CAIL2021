@@ -2,7 +2,6 @@ import json
 import torch
 import numpy as np
 import os
-from pytorch_pretrained_bert import BertTokenizer
 
 
 class WordFormatter:
