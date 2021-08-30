@@ -190,6 +190,7 @@ python                    3.8.5
 python-crfsuite           0.9.7          
 python-dateutil           2.8.2          
 python-docx               0.8.11         
+pytorch-crf               0.7.2          
 pytorch-lightning         1.4.2          
 pytorch-pretrained-bert   0.6.2          
 pytorch-transformers      1.2.0          
