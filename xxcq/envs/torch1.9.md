@@ -24,6 +24,7 @@ blinker                   1.4
 blis                      0.4.1          
 boto3                     1.18.18        
 botocore                  1.21.18        
+bpemb                     0.3.3          
 brotlipy                  0.7.0        
 bs4                       0.0.1          
 bz2file                   0.98           
@@ -33,13 +34,16 @@ catalogue                 2.0.4
 certifi                   2020.6.20     
 cffi                      1.14.3        
 chardet                   3.0.4        
+charset-normalizer        2.0.4          
 checklist                 0.0.11         
 cheroot                   8.5.2          
 cherrypy                  18.6.1         
 click                     7.1.2          
+cloudpickle               1.6.0          
 conda                     4.9.2         
 conda-package-handling    1.7.2         
 configparser              5.0.2          
+conllu                    4.4.1          
 coverage                  5.5            
 cryptography              3.2.1         
 cycler                    0.10.0         
@@ -48,6 +52,7 @@ cython                    0.29.24
 debugpy                   1.4.1          
 decorator                 4.4.2          
 defusedxml                0.6.0          
+deprecated                1.2.12         
 dill                      0.3.4          
 docker-pycreds            0.4.0          
 docutils                  0.17.1         
@@ -56,13 +61,16 @@ fastprogress              0.2.3
 fasttext                  0.9.2          
 feedparser                6.0.8          
 filelock                  3.0.12         
+flair                     0.9            
 flask                     1.1.2          
 flatbuffers               1.12           
 fsspec                    2021.7.0       
+ftfy                      6.0.3          
 funcsigs                  1.0.2          
 future                    0.18.2         
 gast                      0.4.0          
-gensim                    4.0.1          
+gdown                     3.12.2         
+gensim                    3.8.3          
 gitdb                     4.0.7          
 gitpython                 3.1.20         
 google-api-core           1.31.1         
@@ -79,8 +87,9 @@ graphql-core              3.1.5
 grpcio                    1.28.1         
 h5py                      3.1.0          
 huggingface-hub           0.0.12         
+hyperopt                  0.2.5          
 idna                      2.10          
-importlib-metadata        1.6.0          
+importlib-metadata        3.10.1         
 iniconfig                 1.1.1          
 ipykernel                 6.0.3          
 ipython                   7.26.0         
@@ -88,6 +97,7 @@ ipython-genutils          0.2.0
 ipywidgets                7.6.3          
 iso-639                   0.4.5          
 itsdangerous              2.0.1          
+janome                    0.4.1          
 jaraco-classes            3.2.1          
 jaraco-collections        3.4.0          
 jaraco-functools          3.3.0          
@@ -119,6 +129,8 @@ keras-preprocessing       1.1.0
 keras-self-attention      0.41.0         
 keras-transformer         0.33.0         
 kiwisolver                1.3.1          
+konoha                    4.6.5          
+langdetect                1.0.9          
 ld_impl_linux-64          2.33.1        
 libedit                   3.1.20191231  
 libffi                    3.3           
@@ -133,6 +145,7 @@ matplotlib                3.2.1
 matplotlib-inline         0.1.2          
 mistune                   0.8.4          
 more-itertools            8.8.0          
+mpld3                     0.3            
 multidict                 5.1.0          
 munch                     2.5.0          
 murmurhash                1.0.5          
@@ -141,6 +154,7 @@ nbconvert                 6.1.0
 nbformat                  5.1.3          
 ncurses                   6.2           
 nest-asyncio              1.5.1          
+networkx                  2.6.2          
 nltk                      3.5            
 notebook                  6.4.3          
 numexpr                   2.7.1          
@@ -201,7 +215,7 @@ qtconsole                 5.1.1
 qtpy                      1.9.0          
 readline                  8.0           
 regex                     2021.8.3       
-requests                  2.24.0        
+requests                  2.26.0         
 requests-oauthlib         1.3.0          
 rsa                       4.7.2          
 ruamel_yaml               0.15.87       
@@ -210,8 +224,9 @@ sacremoses                0.0.45
 scikit-learn              0.24.0         
 scikit-multilearn         0.2.0          
 scipy                     1.7.1          
+segtok                    1.5.10         
 send2trash                1.8.0          
-sentencepiece             0.1.96         
+sentencepiece             0.1.95         
 sentry-sdk                1.3.1          
 seqeval                   1.2.2          
 setuptools                50.3.1        
@@ -227,6 +242,7 @@ soupsieve                 2.2.1
 spacy                     3.0.7          
 spacy-legacy              3.0.8          
 sqlite                    3.33.0        
+sqlitedict                1.7.0          
 srsly                     2.4.1          
 tabulate                  0.8.9          
 tempora                   4.1.1          
@@ -264,6 +280,7 @@ webencodings              0.5.1
 werkzeug                  2.0.1          
 wheel                     0.35.1        
 widgetsnbextension        3.5.1          
+wikipedia-api             0.5.4          
 wrapt                     1.12.1         
 xgboost                   1.4.2          
 xz                        5.2.5         
