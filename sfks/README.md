@@ -2,7 +2,7 @@
 
 该项目为 **CAIL2021——司法考试** 的代码和模型提交说明。
 
-数据集下载请访问比赛[主页](http://cail.cipsc.org.cn/)。
+数据集下载请访问比赛[主页](http://cail.cipsc.org.cn/)。问题参考资料[下载](https://data.thunlp.org/legal/jecqa_reference_book.zip)，该数据只可用于该比赛，未经允许禁止在其他领域中使用。
 
 ## 数据集引用
 
