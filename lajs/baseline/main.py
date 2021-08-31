@@ -5,10 +5,16 @@ import random
 from gensim.summarization import bm25
 import jieba
 import numpy as np
+from transformers import AutoTokenizer, AutoModelForMaskedLM
 
 parser = argparse.ArgumentParser(description="Help info.")
 parser.add_argument('--input', type=str, help='input path of the dataset directory.')
 parser.add_argument('--output', type=str, help='output path of the prediction file.')
+
+# #If you need models from the server:
+# huggingface = '/work/mayixiao/CAIL2021/root/big/huggingface'
+# tokenizer = AutoTokenizer.from_pretrained(os.path.join(args.huggingface, "thunlp/Lawformer"))
+# model = AutoModelForMaskedLM.from_pretrained(os.path.join(args.huggingface, "thunlp/Lawformer"))
 
 args = parser.parse_args()
 input_path = args.input

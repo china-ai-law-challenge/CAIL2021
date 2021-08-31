@@ -1,6 +1,6 @@
 # CAIL2021 —— 类案检索
 
-该项目为 **CAIL2021——类案检索** 的代码和模型提交说明
+该项目为 **CAIL2021——类案检索** 的代码和模型提交说明（赛事答疑qq群：237633234）
 
 ## 任务介绍
 
@@ -74,6 +74,27 @@ Yixiao Ma, Yunqiu Shao, Yueyue Wu, Yiqun Liu∗, Ruizhe Zhang, Min Zhang, Shaopi
 
 在`baseline/`文件夹下，有一个简单的bm25模型作为参考；在初赛数据集上，该模型的NDCG@30为0.7903。
 
+在复赛和封测阶段，评测将离线进行，因此如果你需要加载在线模型（例如huggingface）则需要将模型下载下来后一起打包上传；或者你也通过可以加载我们在服务器上缓存的常见模型，模型的根目录为`/work/mayixiao/CAIL2021/root/big/huggingface`。具体缓存的模型名称以及对应网站有：
+
+- [bert-base-chinese](https://huggingface.co/bert-base-chinese)
+- [hfl/chinese-bert-wwm-ext](https://huggingface.co/hfl/chinese-bert-wwm-ext)
+- [hfl/chinese-roberta-wwm-ext](https://huggingface.co/hfl/chinese-roberta-wwm-ext)
+- [hfl/chinese-electra-180g-base-discriminator](https://huggingface.co/hfl/chinese-electra-180g-base-discriminator)
+- [hfl/chinese-legal-electra-base-discriminator](https://huggingface.co/hfl/chinese-legal-electra-base-discriminator)
+- [thunlp/Lawformer](https://huggingface.co/thunlp/Lawformer)
+
+你可以使用如下方法加载模型（以'thunlp/Lawformer'为例）：
+
+```
+import os
+import argparse
+from transformers import AutoTokenizer, AutoModelForMaskedLM
+
+huggingface = '/work/mayixiao/CAIL2021/root/big/huggingface'
+tokenizer = AutoTokenizer.from_pretrained(os.path.join(huggingface, "thunlp/Lawformer"))
+model = AutoModelForMaskedLM.from_pretrained(os.path.join(huggingface, "thunlp/Lawformer"))
+```
+
 请注意：提交结果的字典务必包括**全部**query的`ridx`作为key，并且由于本次类案检索任务的评测指标是NDCG@30，所以每个key下对应的列表长度至少为30（建议为100）。提交格式的错误将会直接影响评测结果！
 
 ## 评测指标
@@ -85,6 +106,14 @@ Yixiao Ma, Yunqiu Shao, Yueyue Wu, Yiqun Liu∗, Ruizhe Zhang, Min Zhang, Shaopi
 如上文所述，我们现阶段只支持`python`语言的提交，但是这并不代表你不能够使用其他语言进行预测。你可以使用`python3 main.py --input INPUT_PATH --output OUTPUT_PATH`去调用运行其他语言的命令。
 
 ## 常见问题Q&A（持续更新）：
+
+### 复赛可以提交几次？
+
+一周至多三次。
+
+### 截止9.1，还没提交初赛模型的就淘汰了吗？
+
+没有，初赛截止日期为2021年10月10日，也就是说在复赛截止之前你都有机会参加并通过初赛。
 
 ### 为什么`label_top30_dict.json`下每个query只有30个candidate的标签？
 
@@ -119,9 +148,12 @@ anaconda-project                   0.8.0
 appdirs                            1.4.4
 asgiref                            3.3.1
 asn1crypto                         0.22.0
+astor                              0.8.1
 astroid                            1.5.3
 astropy                            2.0.2
+astunparse                         1.6.3
 Babel                              2.5.0
+backcall                           0.2.0
 backports.shutil-get-terminal-size 1.0.0
 beautifulsoup4                     4.6.0
 bitarray                           0.8.1
@@ -130,15 +162,16 @@ blaze                              0.11.3
 bleach                             2.0.0
 bokeh                              0.12.10
 boto                               2.48.0
-boto3                              1.15.7
-botocore                           1.18.7
+boto3                              1.18.24
+botocore                           1.21.24
 Bottleneck                         1.2.1
+cached-property                    1.5.2
 cachetools                         4.2.2
 certifi                            2021.5.30
 cffi                               1.10.0
 chardet                            3.0.4
 charset-normalizer                 2.0.3
-click                              6.7
+click                              8.0.1
 cloudpickle                        0.4.0
 clyent                             1.2.2
 colorama                           0.3.9
@@ -168,26 +201,30 @@ fastcache                          1.0.2
 filelock                           3.0.12
 Flask                              0.12.2
 Flask-Cors                         3.0.3
+flatbuffers                        1.12
 future                             0.18.2
+gast                               0.4.0
 gensim                             3.8.3
 gevent                             1.2.2
 glob2                              0.5
 gmpy2                              2.0.8
 google-auth                        1.34.0
 google-auth-oauthlib               0.4.5
+google-pasta                       0.2.0
 greenlet                           0.4.12
-grpcio                             1.39.0
-h5py                               2.7.0
+grpcio                             1.34.1
+h5py                               3.1.0
 heapdict                           1.0.0
 html5lib                           0.999999999
+huggingface-hub                    0.0.12
 idna                               3.2
 imageio                            2.2.0
 imagesize                          0.7.1
 importlib-metadata                 4.6.1
 importlib-resources                5.2.0
 ipykernel                          4.6.1
-ipython                            6.1.0
-ipython-genutils                   0.2.0
+ipython                            7.16.1
+ipython_genutils                   0.2.0
 ipywidgets                         7.0.0
 isort                              4.2.15
 itsdangerous                       0.24
@@ -196,13 +233,25 @@ jedi                               0.10.2
 jieba                              0.42.1
 Jinja2                             2.9.6
 jmespath                           0.10.0
-joblib                             0.17.0
+joblib                             1.0.1
 jsonschema                         2.6.0
 jupyter-client                     5.1.0
-jupyter-console                    5.2.0
+jupyter-console                    6.4.0
 jupyter-core                       4.3.0
 jupyterlab                         0.27.0
 jupyterlab-launcher                0.4.0
+keras                              2.5.0rc0
+Keras-Applications                 1.0.8
+keras-bert                         0.88.0
+keras-embed-sim                    0.9.0
+keras-layer-normalization          0.15.0
+keras-multi-head                   0.28.0
+keras-nightly                      2.5.0.dev2021032900
+keras-pos-embd                     0.12.0
+keras-position-wise-feed-forward   0.7.0
+Keras-Preprocessing                1.1.2
+keras-self-attention               0.50.0
+keras-transformer                  0.39.0
 langdetect                         1.0.8
 langid                             1.1.6
 lazy-object-proxy                  1.3.1
@@ -226,18 +275,20 @@ nbconvert                          5.3.1
 nbformat                           4.4.0
 neotime                            1.7.4
 networkx                           2.0
-nltk                               3.2.4
+nltk                               3.6.2
 nose                               1.3.7
 notebook                           5.0.0
 numba                              0.35.0+10.g143f70e90
 numexpr                            2.6.2
 numpy                              1.19.5
 numpydoc                           0.7.0
+nvidia-ml-py3                      7.352.0
 oauthlib                           3.1.1
 odo                                0.5.1
 olefile                            0.44
 openpyxl                           2.4.8
-packaging                          16.8
+opt-einsum                         3.3.0
+packaging                          21.0
 pandas                             1.1.5
 pandocfilters                      1.4.2
 pansi                              2020.7.3
@@ -248,12 +299,12 @@ patsy                              0.4.1
 pep8                               1.7.0
 pexpect                            4.2.1
 pickleshare                        0.7.4
-Pillow                             4.2.1
-pip                                21.1.3
+Pillow                             8.3.1
+pip                                21.2.4
 pkginfo                            1.4.1
 ply                                3.10
 prettytable                        2.0.0
-prompt-toolkit                     2.0.10
+prompt-toolkit                     2.0.7
 protobuf                           3.17.3
 psutil                             5.4.0
 ptyprocess                         0.5.2
@@ -273,37 +324,38 @@ pylint                             1.7.4
 PyMySQL                            0.10.1
 pyodbc                             4.0.17
 pyOpenSSL                          17.2.0
-pyparsing                          2.2.0
+pyparsing                          2.4.7
 PySocks                            1.6.7
 pytest                             3.2.1
 python-dateutil                    2.8.2
 pytorch-pretrained-bert            0.6.2
 pytz                               2021.1
 PyWavelets                         0.5.2
-PyYAML                             3.12
+PyYAML                             5.4.1
 pyzmq                              16.0.2
 QtAwesome                          0.4.4
 qtconsole                          4.3.1
 QtPy                               1.3.1
 rank-bm25                          0.2.1
-regex                              2020.9.27
+regex                              2021.8.3
 requests                           2.26.0
 requests-oauthlib                  1.3.0
 rope                               0.10.5
 rsa                                4.7.2
-ruamel-yaml                        0.11.14
-s3transfer                         0.3.3
+ruamel_yaml                        0.11.14
+s3transfer                         0.5.0
 sacremoses                         0.0.45
 scikit-image                       0.13.0
-scikit-learn                       0.23.2
-scipy                              0.19.1
+scikit-learn                       0.24.2
+scipy                              1.4.1
 seaborn                            0.8
+sentence-transformers              2.0.0
+sentencepiece                      0.1.96
 setuptools                         57.4.0
 simplegeneric                      0.8.1
 simplejson                         3.17.2
 singledispatch                     3.4.0.3
-six                                1.16.0
-sklearn                            0.0
+six                                1.15.0
 smart-open                         4.1.2
 snowballstemmer                    1.2.1
 sortedcollections                  0.5.3
@@ -318,37 +370,42 @@ sympy                              1.1.1
 tables                             3.4.2
 TBB                                0.1
 tblib                              1.3.2
-tensorboard                        2.5.0
+tensorboard                        2.6.0
 tensorboard-data-server            0.6.1
 tensorboard-plugin-wit             1.8.0
 tensorboardX                       1.8
+tensorflow                         2.5.0
+tensorflow-estimator               2.5.0
+tensorflow-gpu                     1.12.0
+termcolor                          1.1.0
 terminado                          0.6
 testpath                           0.3.1
-threadpoolctl                      2.1.0
+threadpoolctl                      2.2.0
 thulac                             0.2.1
-tokenizers                         0.9.4
+tokenizers                         0.10.3
 toolz                              0.8.2
-torch                              1.2.0
+torch                              1.9.0
 torch-tb-profiler                  0.2.1
-torchvision                        0.7.0
+torchKbert                         1.1
+torchvision                        0.10.0
 tornado                            4.5.2
-tqdm                               4.54.0
+tqdm                               4.62.1
 traitlets                          4.3.2
-transformers                       4.0.0
+transformers                       4.9.2
 typing                             3.6.2
-typing-extensions                  3.10.0.0
+typing-extensions                  3.7.4.3
 tzlocal                            2.0.0
 unicodecsv                         0.14.1
 urllib3                            1.26.6
 virtualenv                         20.4.7
-wcwidth                            0.1.7
+wcwidth                            0.2.5
 webencodings                       0.5.1
 websocket-client                   0.57.0
 Werkzeug                           2.0.1
 wheel                              0.36.2
 Whoosh                             2.7.4
 widgetsnbextension                 3.0.2
-wrapt                              1.10.11
+wrapt                              1.12.1
 xlrd                               1.1.0
 XlsxWriter                         1.0.2
 xlwt                               1.3.0
@@ -356,4 +413,4 @@ zict                               0.1.3
 zipp                               3.5.0
 ```
 
-如果你有其他环境或者python库要求，可以在issue中写明具体需求。
+如果你有其他环境或者python库要求，可以在issue中写明具体需求，或者在qq群中与技术人员沟通。

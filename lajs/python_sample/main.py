@@ -2,10 +2,16 @@ import argparse
 import json
 import os
 import random
+from transformers import AutoTokenizer, AutoModelForMaskedLM
 
 parser = argparse.ArgumentParser(description="Help info.")
 parser.add_argument('--input', type=str, help='input path of the dataset directory.')
 parser.add_argument('--output', type=str, help='output path of the prediction file.')
+
+# #If you need models from the server:
+# huggingface = '/work/mayixiao/CAIL2021/root/big/huggingface'
+# tokenizer = AutoTokenizer.from_pretrained(os.path.join(huggingface, "thunlp/Lawformer"))
+# model = AutoModelForMaskedLM.from_pretrained(os.path.join(huggingface, "thunlp/Lawformer"))
 
 args = parser.parse_args()
 input_path = args.input
