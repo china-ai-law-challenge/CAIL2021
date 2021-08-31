@@ -74,7 +74,7 @@ Yixiao Ma, Yunqiu Shao, Yueyue Wu, Yiqun Liu∗, Ruizhe Zhang, Min Zhang, Shaopi
 
 在`baseline/`文件夹下，有一个简单的bm25模型作为参考；在初赛数据集上，该模型的NDCG@30为0.7903。
 
-在复赛和封测阶段，评测将离线进行，因此如果你需要加载在线模型（例如huggingface）则需要将模型下载下来后一起打包上传；或者你也通过可以加载我们在服务器上缓存的常见模型，模型的根目录为`/work/mayixiao/CAIL2021/root/big/huggingface`。具体缓存的模型名称以及对应网站有：
+在复赛和封测阶段，评测将离线进行，因此如果你需要加载在线模型（例如huggingface）则需要将模型下载下来后一起打包上传；或者也可以加载我们在服务器上缓存的常见模型，模型的根目录为`/work/mayixiao/CAIL2021/root/big/huggingface`。具体缓存的模型名称以及对应网站有：
 
 - [bert-base-chinese](https://huggingface.co/bert-base-chinese)
 - [hfl/chinese-bert-wwm-ext](https://huggingface.co/hfl/chinese-bert-wwm-ext)
