@@ -50,6 +50,7 @@ ddparser                  0.1.0
 decorator                 4.4.2          
 defusedxml                0.6.0          
 docutils                  0.15.2         
+fastnlp                   0.6.0          
 fastprogress              0.2.3          
 fastrlock                 0.5            
 fasttext                  0.9.2          
@@ -220,7 +221,7 @@ srsly                     1.0.2
 sru                       2.3.5          
 taboo                     0.8.8          
 tabulate                  0.8.7          
-tensorboard               1.14.0       
+tensorboard               1.14.0        
 tensorflow                1.14.0      
 tensorflow-base           1.14.0      
 tensorflow-estimator      1.14.0         

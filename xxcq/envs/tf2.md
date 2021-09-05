@@ -116,7 +116,7 @@ jpype1                    0.7.0
 jsonnet                   0.17.0         
 jsonschema                3.2.0          
 jupyter                   1.0.0          
-jupyter-client            6.1.12         
+jupyter-client            6.2.0         
 jupyter-console           6.4.0          
 jupyter-core              4.7.1          
 jupyterlab-pygments       0.1.2          

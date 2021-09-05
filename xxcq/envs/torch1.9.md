@@ -186,6 +186,7 @@ protobuf                  3.17.3
 psutil                    5.8.0          
 ptyprocess                0.7.0          
 py                        1.10.0         
+pyahocorasick             1.4.2          
 pyasn1                    0.4.8          
 pyasn1-modules            0.2.8          
 pybind11                  2.7.1          
