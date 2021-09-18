@@ -28,7 +28,7 @@ QQ群：237633234
 
 我们提供基于[legal-ELECTRA-base中文预训练模型](https://github.com/ymcui/Chinese-ELECTRA)的基线模型（训练代码），放置在``baseline``目录下，供选手参考。
 
-并提供基线模型的[提交版本](http://pan.iflytek.com:80/link/C0EFACE49E856F51F4823DD866583C29)(有效期限：2021-08-28，访问密码：HyKE)
+并提供基线模型的[提交版本](http://pan.iflytek.com:80/link/B7F41F4A01F92BB1D68C22A28C424B69)(有效期限：2021-10-18, 访问密码：d412)
 
 ## 评测脚本
 
