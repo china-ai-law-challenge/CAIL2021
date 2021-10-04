@@ -102,7 +102,7 @@ model = AutoModelForMaskedLM.from_pretrained(os.path.join(huggingface, "thunlp/L
 
 类案检索任务的评测指标为[NDCG](https://en.wikipedia.org/wiki/Discounted_cumulative_gain)@30，也即结果列表前30位candidate的NDCG（Normalized Discounted Cumulative Gain）值。复赛阶段至多可提交三个模型，以最高NDCG@30分数作为复赛阶段成绩；封闭评测阶段。参赛者可自主从复赛阶段提交的三个模型中指定任意一个模型为最终模型，其在封测数据集上的NDCG@30分数计为封测阶段成绩。
 
-最终队伍分数 = 0.3 $\times$ 复赛成绩 + 0.7 $\times$ 封测成绩
+最终队伍分数 = 0.3 * 复赛成绩 + 0.7 * 封测成绩
 
 ## 其他语言的支持
 
